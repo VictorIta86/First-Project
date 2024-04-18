@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personalized Learning Software</title>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script><!-- Vue.js for dynamic UI -->
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div id="app">
+<h1>Welcome to Personalized Learning Software</h1>
+<div  v-if="suggestedCourses.length === 0">
+
+
+    <form @submit.prevent="submitData">
+    <label for="studentName">Student Name:</label>
+    <input type="text" id="studentName" v-model="studentName" required><br><br>
+
+    <!-- Questionnaire to gather student data -->
+    <h2>Student Learning Needs Assessment</h2>
+    <label for="interests">Interests:</label>
+    <textarea id="interests" v-model="interests" required></textarea><br><br>
+
+    <label for="passion">Passion:</label>
+    <textarea id="passion" v-model="passion" required></textarea><br><br>
+
+    <label for="previousLearning">Previous Learning:</label>
+    <textarea id="previousLearning" v-model="previousLearning" required></textarea><br><br>
+
+    <label for="futureAmbition">Future Ambition:</label>
+    <textarea id="futureAmbition" v-model="futureAmbition" required></textarea><br><br>
+
+    <button type="submit"> Submit </button>
+    </form>
+</div>
+<div v-if="suggestedCourses.length > 0">
+<h2>Suggested Courses based on your input:</h2>
+<ul>
+<li v-for="course in suggestedCourses">{{ course }}</li>
+</ul>
+</div>
+</div>
+
+<script>
+        new Vue({
+            el: '#app',
+            data: {
+                studentName: '',
+                interests: '',
+                passion: '',
+                previousLearning: '',
+                futureAmbition: '',
+                suggestedCourses: []
+            },
+            methods: {
+                submitData() {
+                    // Perform data submission and ML model inference here
+                    // For now, let's simulate the ML model inference with random courses
+                    this.suggestedCourses = [
+'Introduction to Python Programming',
+'Data Science Fundamentals',
+'Web Development with HTML, CSS, and JavaScript'
+                    ];
+                }
+            }
+        });
+</script>
+</body>
+</html>

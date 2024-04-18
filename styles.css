@@ -1,0 +1,91 @@
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: yellow;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container styles */
+  .container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: purple;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading styles */
+  h1, h2 {
+    color: #333;
+  }
+  
+  /* Button styles */
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: blueviolet;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Form styles */
+  form {
+    margin-top: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Feedback styles */
+  .feedback {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  .success {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .error {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
